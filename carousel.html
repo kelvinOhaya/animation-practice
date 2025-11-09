@@ -8,7 +8,33 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <p>This is carousel</p>
+    <div class="carousel-container">
+      <div class="slides-and-buttons">
+        <div class="slides">
+          <div class="slide left">
+            <div style="background-color: red"></div>
+          </div>
+          <div class="slide active">
+            <div style="background-color: green"></div>
+          </div>
+          <div class="slide right">
+            <div style="background-color: blue"></div>
+          </div>
+          <div class="slide inactive">
+            <div style="background-color: purple"></div>
+          </div>
+          <div class="slide inactive">
+            <div style="background-color: yellow"></div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button type="button" id="leftBtn" class="move">&lt;</button>
+        <button class="live">LIVE</button>
+        <button type="button" id="rightBtn" class="move">&gt;</button>
+      </div>
+    </div>
     <a href="index.html">back</a>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>
