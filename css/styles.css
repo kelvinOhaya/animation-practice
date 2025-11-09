@@ -1,0 +1,113 @@
+:root {
+  --primary: #1b1b1b;
+  --secondary: #554b4b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.navbar {
+  position: absolute;
+  top: 100px;
+  right: 200px;
+  width: 65px;
+  height: 40px;
+  background-color: var(--primary);
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.navbar.open {
+  width: 200px;
+  height: 200px;
+}
+
+.nav-open-anim {
+  animation: open 0.7s forwards;
+}
+
+.nav-close-anim {
+  animation: close 0.7s forwards;
+}
+
+@keyframes open {
+  0% {
+    width: 65px;
+    height: 40px;
+  }
+
+  50% {
+    width: 200px;
+    height: 40px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes close {
+  0% {
+    width: 200px;
+    height: 200px;
+  }
+  50% {
+    width: 200px;
+    height: 40px;
+  }
+  100% {
+    width: 65px;
+    height: 40px;
+  }
+}
+
+.top-frame {
+  width: 100%;
+  background: var(--secondary);
+  display: flex;
+  padding: 5px 15px 5px 5px;
+}
+
+.menu-icon {
+  background: transparent;
+  border: none;
+  margin-left: auto;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
+}
+
+.link-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.link-container a {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 0 10px 20px;
+  transition: background-color 0.2s ease;
+}
+
+.link-container a:hover {
+  background-color: var(--secondary);
+}
